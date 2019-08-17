@@ -34,6 +34,3 @@ def encrypt_data(data, out_dir, public_key_dir):
     cipher_text, tag = cipher_aes.encrypt_and_digest(data)
     [file_out.write(component) for component in (enc_session_key, cipher_aes.nonce, tag, cipher_text)]
     print(file_dir)
-
-
-encrypt_data("hello woooreajfoh0910312.,of||", "./h", "./generated_keys/public.pem")
